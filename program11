@@ -1,0 +1,40 @@
+package com.Programs;
+
+class Student{
+	private String name;
+	private int rollno;
+	private int marks;
+	public Student() {
+		System.out.println("This is default constructor");
+	}
+	public Student(String name,int rollno,int marks) {
+		this.name=name;
+		this.rollno=rollno;
+		this.marks=marks;
+	
+	}
+	public String getName() {
+		return name;
+	}
+	public int getRollno() {
+		return rollno;
+	}
+	public int getMarks() {
+		return marks;
+	}
+	
+}
+
+public class Program11 {
+
+	public static void main(String[] args) {
+		Student s=new Student();
+		Student s1=new Student("jyothi",12,200);
+		System.out.println("name"+s1.getName());
+		System.out.println("rollno"+s1.getRollno());
+		System.out.println("marks"+s1.getMarks());
+
+		
+	}
+
+}
