@@ -1,0 +1,21 @@
+package com.Programs;
+class Rectangle{
+	public Rectangle(int l,int b) {
+		int area=l*b;
+		System.out.println("area of the constructor is"+area);
+	}
+	public Rectangle(int l) {
+		int area=l*l;
+		System.out.println("area of the constructor is"+area);
+	}
+}
+
+public class Program12 {
+	
+	public static void main(String[] args) {
+		Rectangle r1=new Rectangle(2,4);
+		Rectangle r2=new Rectangle(2);
+
+	}
+
+}
