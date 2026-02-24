@@ -1,0 +1,72 @@
+package com.Programs;
+class BankAccount{
+	private long accNo;
+	private String name;
+	private double balance;
+	public BankAccount() {
+		
+		balance=1000;
+		
+	}
+	public BankAccount(long accNo, String name, double balance) {
+		
+		this.accNo = accNo;
+		this.name = name;
+		this.balance = balance;
+	}
+	
+	public long getAccNo() {
+		return accNo;
+	}
+	public String getName() {
+		return name;
+	}
+	public double getBalance() {
+		return balance;
+	}
+	
+	public  void deposite(int deposite) {
+		
+		double temp=getBalance();
+		double balance=temp-deposite;
+		System.out.println("deposited amount is"+balance);
+	
+	
+	
+	}
+	public void withdraw(int withdraw) {
+		
+		double temp=getBalance();
+		if(withdraw>temp) {
+			
+		double balance=temp-withdraw;
+		System.out.println("withdrawed amount"+balance);
+	}
+		else {
+			System.out.println("insufficient");
+		}
+		}
+	public void display() {
+		System.out.println("Accno"+getAccNo());
+		System.out.println("name"+getName());
+		System.out.println("balance"+getBalance());
+	}
+}
+class SavingsAccount extends BankAccount{
+	public SavingsAccount() {
+		super(12613,"jyothi",12000);
+		int interest=12;
+		System.out.println("Yearly interest is"+(12*10000*12)/100);
+	}
+}
+public class Program15 {
+
+	public static void main(String[] args) {
+		BankAccount a=new BankAccount();
+		SavingsAccount  s=new SavingsAccount ();
+	s.withdraw(1200);
+	s.deposite(1200);
+	s.display();
+	}
+
+}
