@@ -1,0 +1,23 @@
+package com.Programs;
+class Person{
+	public Person(int a,int b) {
+		System.out.println("This is parent constructor");
+		System.out.println("Addition of two values is"+(a+b));
+	}
+}
+class Employee extends Person{
+	public Employee(int a) {
+		super(2,4);
+		System.out.println("This is child constructor");
+		System.out.println("A value is"+a);
+	}
+}
+
+public class Program13 {
+
+	public static void main(String[] args) {
+		Employee c=new Employee(2);
+
+	}
+
+}
